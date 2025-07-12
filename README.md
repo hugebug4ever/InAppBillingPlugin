@@ -16,7 +16,7 @@ Get started by reading through the [In-App Billing Plugin documentation](https:/
 
 ## NuGet
 
-* NuGet: [Plugin.InAppBilling](https://www.nuget.org/packages/Plugin.InAppBilling) [![NuGet](https://img.shields.io/nuget/v/Plugin.InAppBilling.svg?label=NuGet)](https://www.nuget.org/packages/Plugin.InAppBilling/)
+* NuGet: [Plugin.InAppBilling](https://www.nuget.org/packages/Plugin.InAppBilling.hugebug4ever) [![NuGet](https://img.shields.io/nuget/v/Plugin.InAppBilling.hugebug4ever.svg?label=NuGet)](https://www.nuget.org/packages/Plugin.InAppBilling.hugebug4ever/)
 
 ## Platform Support
 

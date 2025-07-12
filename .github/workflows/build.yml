@@ -19,14 +19,19 @@ jobs:
 
     - name: Restore Dependencies
       working-directory: src/Plugin.InAppBilling
-      run:
+      run: |
         dotnet workload restore 
         dotnet restore
+
+    - name: Build
+      working-directory: src/Plugin.InAppBilling
+      run: dotnet build --no-restore --configuration Release
 
    # - name: Test
    #   run: dotnet test --configuration Release
 
     - name: Package NuGets
+      working-directory: src/Plugin.InAppBilling
       shell: pwsh
       run: |
         $VERSION="$env:NUPKG_MAJOR-ci$env:GITHUB_RUN_ID"
@@ -36,7 +41,7 @@ jobs:
         echo "::set-output name=pkgverci::$VERSION"
         echo "PACKAGE VERSION: $VERSION"
         
-        dotnet pack -p:PackageOutputPath=./artifacts -p:Configuration=Release -p:PackageVersion=$VERSION ./src/Plugin.InAppBilling/Plugin.InAppBilling.csproj
+        dotnet pack --no-build -p:PackageOutputPath=../../artifacts -p:Configuration=Release -p:PackageVersion=$VERSION ./Plugin.InAppBilling.csproj
 
     - name: Artifacts
       uses: actions/upload-artifact@v4.6.2
