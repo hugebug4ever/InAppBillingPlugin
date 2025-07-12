@@ -17,8 +17,15 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4.2.2
 
+    - name: Restore Dependencies
+      working-directory: src/Plugin.InAppBilling
+      run:
+        dotnet workload restore 
+        dotnet restore
+
    # - name: Test
    #   run: dotnet test --configuration Release
+
     - name: Package NuGets
       shell: pwsh
       run: |
