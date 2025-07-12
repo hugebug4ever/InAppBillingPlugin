@@ -62,7 +62,4 @@ jobs:
 
       - name: Push NuGet
         run: |
-          pwd
-          ls -la
-          ls -la ./NuGet
-          dotnet nuget push ./NuGet/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_PROJECT_API_KEY }}
+          dotnet nuget push *.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_PROJECT_API_KEY }}
