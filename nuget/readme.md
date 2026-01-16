@@ -1,6 +1,7 @@
-In-App Billing Plugin for .NET MAU
+# In-App Billing Plugin for .NET MAU
 
 One of successors for archived porject Plugin.InAppBilling by James Montemagno.
 
-Version 9.0+ - .NET 9+
-1. Built against Android Billing v7
+## Version 9.0+ - .NET 9+
+
+i. Built against Android Billing v7
